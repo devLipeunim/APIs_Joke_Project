@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokes</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="response-area">
+        <p><%= content %></p>
+      </div>
+      <form id="myForm" method="post">
+        <label for="idInput">Id:</label>
+        <input type="number" id="idInput" name="id" />
+
+        <div class="checkbox">
+          <label for="programmingInput">Programming:</label>
+          <input type="checkbox" id="programmingInput" name="Programming" value="programming" />
+          <label for="miscInput">Misc:</label>
+          <input type="checkbox" id="miscInput" name="Miscellaneous" value="misc" />
+          <label for="darkInput">Dark:</label>
+          <input type="checkbox" id="darkInput" name="Dark" value="dark" />
+          <label for="punInput">Pun:</label>
+          <input type="checkbox" id="punInput" name="Pun" value="pun" />
+          <label for="spookyInput">Spooky:</label>
+          <input type="checkbox" id="spookyInput" name="Spooky" value="spooky" />
+          <label for="christmasInput">Christmas:</label>
+          <input type="checkbox" id="christmasInput" name="Christmas" value="christmas" />
+        </div>
+
+        <label for="amountOfJokesInput">Amoumt of jokes:</label>
+        <input type="number" name="amountOfJokes" id="amountOfJokesInput" />
+
+        <!-- <label for="scoreInput">Score:</label>
+        <input type="number" name="score" id="scoreInput" /> -->
+
+        <label for="submit">Route:</label>
+        <input type="submit" id="get" value="Random" formaction="/get-joke" />
+        <input type="submit" id="post" value="POST" formaction="/post-joke" />
+        <!-- <input type="submit" id="put" value="PUT" formaction="/put-secret" />
+        <input type="submit" id="patch" value="PATCH" formaction="/patch-secret" />
+        <input type="submit" id="delete" value="DELETE" formaction="/delete-secret" /> -->
+      </form>
+    </div>
+  </body>
+</html>
